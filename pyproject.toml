@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "smart-expense-tracker"
+version = "1.0.0"
+description = "A beginner-friendly command-line personal expense tracker."
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [{name = "Your Name"}]
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0"]
+
+[project.scripts]
+expense-tracker = "expense_tracker.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
